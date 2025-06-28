@@ -1,0 +1,22 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  height: 100vh;           /* ensures full viewport height */
+  background-image: url("./public/bg.png");
+}
+
+#root{
+  height: 100vh;
+  width: 100vh;
+  background-image: url(./public/chat-bg.jpg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
