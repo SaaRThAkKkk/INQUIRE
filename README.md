@@ -1,69 +1,83 @@
-# React + TypeScript + Vite
+💬 AI Chatbot App
+A responsive and interactive AI-powered chatbot built with React, Vite, Axios, and integrated with Google Gemini API. This app allows users to communicate with an AI assistant in real time.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Features
+⚡ Fast bundling and development with Vite
 
-Currently, two official plugins are available:
+🤖 AI interaction using Gemini API
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🌐 Real-time chat interface with dynamic response handling
 
-## Expanding the ESLint configuration
+🧠 Maintains message history and differentiates user/bot messages
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🎨 Styled with Tailwind CSS for a modern, clean UI
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+🛠️ Tech Stack
+React – Frontend library
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Vite – Build tool for fast performance
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Axios – For making HTTP requests
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Gemini API – Google’s large language model for AI responses
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+TypeScript – (Optional) for static type checking
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Tailwind CSS – Utility-first CSS framework for styling
+
+
+
+📁 Project Structure
+src/
+│
+├── components/         # Reusable UI components
+├── hooks/              # Custom React hooks (e.g., useChatbot)
+├── App.tsx             # Main App component
+├── main.tsx            # Vite entry point
+└── index.css           # Global styles (Tailwind CSS)
+
+
+
+⚙️ Getting Started
+1. Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/chatbot-gemini-app.git
+cd chatbot-gemini-app
+2. Install Dependencies
+bash
+Copy
+Edit
+npm install
+3. Setup Environment Variables
+Create a .env file in the root directory:
+
+ini
+Copy
+Edit
+VITE_GEMINI_API_KEY=your_api_key_here
+🔒 Never expose your API key in frontend code directly. Use environment variables.
+
+4. Start Development Server
+bash
+Copy
+Edit
+npm run dev
+Open http://localhost:5173 in your browser to see the app in action.
+
+📦 Build for Production
+bash
+Copy
+Edit
+npm run build
+
+
+🧠 How It Works
+User enters a prompt into the input field.
+
+The prompt is sent to Gemini API using Axios.
+
+The response is parsed and displayed in the chat window.
+
+All messages are stored in the component state.
